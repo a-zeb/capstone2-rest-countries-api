@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import HomePage from './pages/HomePage';
 import './App.css';
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         <main className="container">
           <Routes>
-            <Route path="/" element={<div>Home Page (coming soon)</div>} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/country/:id" element={<div>Detail Page (coming soon)</div>} />
           </Routes>
         </main>
