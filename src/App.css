@@ -84,6 +84,47 @@ body {
   padding: 48px 0;
 }
 
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 48px;
+}
+
+.search-box input {
+  padding: 18px 32px;
+  width: 480px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--elements);
+  color: var(--text);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-family);
+}
+
+.filter-box select {
+  padding: 18px 24px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--elements);
+  color: var(--text);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-family);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1200px) {
   .countries-grid {
     grid-template-columns: repeat(3, 1fr);
